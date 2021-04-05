@@ -1,6 +1,6 @@
 $(function () {
     // 开发环境URL：
-    let baseURL = "http://localhost:3005";
+    let baseURL = "http://api-breakingnews-web.itheima.net";
 
     $.ajaxPrefilter(function (options) {
         options.url = baseURL + options.url;
@@ -16,7 +16,7 @@ $(function () {
                     // console.log(res.responseJSON);
                     let obj = res.responseJSON;
                     // 判断：如果 status 等于 1 且 message 
-                    if (obj.code == 1 && obj.message === "身份认证失败！") {
+                    if (obj.status == 1 && obj.message === "身份认证失败！") {
                         // 清空本地token
                         localStorage.removeItem('token');
                         // 跳转到 login.html

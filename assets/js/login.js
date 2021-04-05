@@ -45,7 +45,7 @@ $(function () {
                 console.log(res);
                 // 错误
                 if (res.status != 0) {
-                    return layer.msg(res.msg, { icon: 5 });
+                    return layer.msg(res.message, { icon: 5 });
                 };
 
                 // 成功 跳转到登录页面 
@@ -72,7 +72,7 @@ $(function () {
                 console.log(res);
                 // 错误
                 if (res.status != 0) {
-                    return layer.msg(res.msg, { icon: 5 });
+                    return layer.msg(res.message, { icon: 5 });
                 };
 
                 // 成功 跳转到首页，将登录页面的内容清空，保存token值

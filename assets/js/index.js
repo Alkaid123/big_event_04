@@ -28,7 +28,7 @@ function getUserInfo() {
             // console.log(res);
             // 请求失败
             if (res.status != 0) {
-                return layer.msg(res.msg, { icon: 5 });
+                return layer.msg(res.message, { icon: 5 });
             }
 
             // 请求成功，渲染头像
